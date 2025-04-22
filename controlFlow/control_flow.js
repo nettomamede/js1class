@@ -57,3 +57,27 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+// Dietary Services Authorization Program
+
+let personRole = "Non-Subscriber"; // Change this to "Employee", "Enrolled Member", "Subscriber", or "Non-Subscriber"
+let accessMessage;
+
+switch (personRole) {
+    case "Employee":
+        accessMessage = "You are authorized to have access to Dietary Services.";
+        break;
+    case "Enrolled Member":
+        accessMessage = "You are authorized to have access to Dietary Services and one-on-one interaction with a dietician.";
+        break;
+    case "Subscriber":
+        accessMessage = "You are authorized to have partial access to facilitate Dietary Services only.";
+        break;
+    case "Non-Subscriber":
+        accessMessage = "You need to enroll or subscribe first to avail Dietary Services.";
+        break;
+    default:
+        accessMessage = "Invalid role. Please specify a valid role.";
+}
+
+console.log(accessMessage);
