@@ -43,3 +43,13 @@ displayTasks();
 taskInput.addEventListener("keypress", (event) => {
     if (event.key === "Enter") addTask();
 });
+
+const clearAllBtn = document.getElementById("clearAllBtn");
+
+
+function clearAllTasks() {
+    tasks = []; // Empty the tasks array
+    displayTasks(); // Refresh the list
+}
+
+clearAllBtn.addEventListener("click", clearAllTasks);
